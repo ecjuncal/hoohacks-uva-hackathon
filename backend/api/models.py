@@ -6,8 +6,8 @@ class User(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(80), index=True, unique=True, nullable=False)
-    first_name = db.Column(db.String(50), index=False, unique=True, nullable=False)
-    last_name = db.Column(db.String(50), index=False, unique=True, nullable=False)
+    first_name = db.Column(db.String(50), index=False, unique=False, nullable=False)
+    last_name = db.Column(db.String(50), index=False, unique=False, nullable=False)
     password = db.Column(db.String(128), nullable=False)
     created = db.Column(db.DateTime, index=False, unique=False, nullable=False)
 
@@ -16,3 +16,14 @@ class User(db.Model):
 
     def is_correct_password(self, plaintext_password):
         return bcrypt.check_password_hash(self.password, plaintext_password)
+
+    def serialize(self):
+        d = {
+            "id": self.id,
+            "email": self.email,
+            "fname": self.first_name,
+            "lname": self.last_name,
+            "created": self.created
+        }
+
+        return d
