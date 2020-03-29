@@ -9,6 +9,7 @@ class User(db.Model):
     first_name = db.Column(db.String(50), index=False, unique=False, nullable=False)
     last_name = db.Column(db.String(50), index=False, unique=False, nullable=False)
     password = db.Column(db.String(128), nullable=False)
+    monthly_income = db.Column(db.Float, nullable=False)
     created = db.Column(db.DateTime, index=False, unique=False, nullable=False)
 
     def set_password(self, plaintext_password):
@@ -23,6 +24,7 @@ class User(db.Model):
             "email": self.email,
             "fname": self.first_name,
             "lname": self.last_name,
+            "monthly_income": self.monthly_income,
             "created": self.created
         }
 

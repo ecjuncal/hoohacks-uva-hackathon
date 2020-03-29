@@ -16,7 +16,7 @@ def login():
         user_exists = User.query.filter(User.email == email).first()
 
         if user_exists and user_exists.is_correct_password(password):
-            return jsonify({**{"error": False}, **user_exists.serialize()})
+            return jsonify(DbModelResponse(user_exists.serialize()).__dict__())
 
     return jsonify(ErrorResponse("User does not exist or credentials are incorrect.").__dict__)
 
@@ -28,14 +28,15 @@ def register():
     lname = data['lname']
     email = data['email']
     password = data['password']
+    income = data['monthly_income']
 
-    if fname and lname and email and password:
+    if fname and lname and email and password and income:
         user_exists = User.query.filter(User.email == email).first()
 
         if user_exists:
             return jsonify(ErrorResponse("User with that email already exists").__dict__)
 
-        new_user = User(first_name=fname, last_name=lname, email=email, created=dt.now())
+        new_user = User(first_name=fname, last_name=lname, email=email, created=dt.now(), monthly_income=income)
         new_user.set_password(password)
 
         db.session.add(new_user)
@@ -55,6 +56,6 @@ def get_user():
         user_exists = User.query.filter(User.email == email).first()
 
         if user_exists:
-            return jsonify({**{"error": False}, **user_exists.serialize()})
+            return jsonify(DbModelResponse(user_exists.serialize()).__dict__())
 
     return jsonify(ErrorResponse("User does not exist.").__dict__)
