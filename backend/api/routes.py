@@ -59,3 +59,8 @@ def get_user():
             return jsonify(DbModelResponse(user_exists.serialize()).__dict__())
 
     return jsonify(ErrorResponse("User does not exist.").__dict__)
+
+
+@app.route("/test", methods=['GET'])
+def get_test():
+    return("<h1>TEST Complete</h1>")

@@ -1,5 +1,12 @@
 runtime: python37
 
+env_variables:
+  MYSQL_DSN: $MYSQL_DSN
+  MYSQL_USER: $MYSQL_USER
+  MYSQL_PASSWORD: $MYSQL_PASSWORD
+
+entrypoint: gunicorn -b :5000 "api:create_app()"
+
 handlers:
 - url: /.*
   script: auto
