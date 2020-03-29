@@ -35,6 +35,10 @@ class PieChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let masterController = self.tabBarController as? TabbarMasterViewController else {
+            return
+        }
+        self.user = masterController.user
         setupUI()
     }
     
@@ -46,35 +50,35 @@ class PieChartViewController: UIViewController {
         let budgetDict = user.budgetItems
         
         foodItem.label = "Food"
-        foodItem.value = budgetDict[BudgetItemName.Food] ?? 0.0
+        foodItem.value = budgetDict[BudgetItemName.Food]?.expectedAmount ?? 0.0
         foodAmountTextField.text = String(foodItem.value)
         if foodItem.value != 0.0 {
             dataEntries.append(foodItem)
         }
         
         housingItem.label = "Housing"
-        housingItem.value = budgetDict[BudgetItemName.Housing] ?? 0.0
+        housingItem.value = budgetDict[BudgetItemName.Housing]?.expectedAmount ?? 0.0
         housingAmountTextField.text = String(housingItem.value)
         if housingItem.value != 0.0 {
             dataEntries.append(housingItem)
         }
 
         transportationItem.label = "Transportation"
-        transportationItem.value = budgetDict[BudgetItemName.Transportation] ?? 0.0
+        transportationItem.value = budgetDict[BudgetItemName.Transportation]?.expectedAmount ?? 0.0
         transportationAmountTextField.text = String(transportationItem.value)
         if transportationItem.value != 0.0 {
             dataEntries.append(transportationItem)
         }
 
         savingsItem.label = "Savings"
-        savingsItem.value = budgetDict[BudgetItemName.Savings] ?? 0.0
+        savingsItem.value = budgetDict[BudgetItemName.Savings]?.expectedAmount ?? 0.0
         savingsAmountTextField.text = String(savingsItem.value)
         if savingsItem.value != 0.0 {
             dataEntries.append(savingsItem)
         }
 
         otherItem.label = "Other"
-        otherItem.value = budgetDict[BudgetItemName.Other] ?? 0.0
+        otherItem.value = budgetDict[BudgetItemName.Other]?.expectedAmount ?? 0.0
         otherAmountTextField.text = String(otherItem.value)
         if otherItem.value != 0.0 {
             dataEntries.append(otherItem)
@@ -94,6 +98,36 @@ class PieChartViewController: UIViewController {
     
     @IBAction func viewChangesPressed(_ sender: Any) {
         //updateFields, update user info, post to db
+        self.setEnableForTextFields(with: false)
+        guard let foodValue = foodAmountTextField.getDoubleData(with: "Please enter a valid number"),
+            let housingValue = housingAmountTextField.getDoubleData(with: "Please enter a valid number"),
+            let transportationValue = transportationAmountTextField.getDoubleData(with: "Please enter a valid number"),
+            let savingsValue = savingsAmountTextField.getDoubleData(with: "Please enter a valid number"),
+            let otherValue = otherAmountTextField.getDoubleData(with: "Please enter a valid number") else {
+                self.setEnableForTextFields(with: true)
+                return
+        }
+        
+        foodItem.value = foodValue
+        housingItem.value = housingValue
+        transportationItem.value = transportationValue
+        savingsItem.value = savingsValue
+        otherItem.value = otherValue
+        updateChartData()
+    }
+    
+    @IBAction func resetTextField(_ sender: UITextField) {
+        sender.isEnabled = true
+        sender.textColor = .black
+        sender.text = ""
+    }
+    
+    func setEnableForTextFields(with value: Bool) {
+        foodAmountTextField.isEnabled = value
+        housingAmountTextField.isEnabled = value
+        transportationAmountTextField.isEnabled = value
+        savingsAmountTextField.isEnabled = value
+        otherAmountTextField.isEnabled = value
     }
 }
 

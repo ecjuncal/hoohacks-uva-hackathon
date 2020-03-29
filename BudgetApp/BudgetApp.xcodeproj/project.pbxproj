@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2424B9BE243127D400501183 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B9BD243127D400501183 /* BarChartViewController.swift */; };
+		2424B9C0243128A600501183 /* TabbarMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B9BF243128A600501183 /* TabbarMasterViewController.swift */; };
+		245547B22431557B0094BD64 /* LoginPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245547B12431557B0094BD64 /* LoginPostRequest.swift */; };
+		245547B42431558C0094BD64 /* SignUpPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245547B32431558C0094BD64 /* SignUpPostRequest.swift */; };
+		24619BF624314204005C40E2 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24619BF524314204005C40E2 /* TransactionsViewController.swift */; };
 		246AFB4C242FC78500C33481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB4B242FC78500C33481 /* AppDelegate.swift */; };
 		246AFB4E242FC78500C33481 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB4D242FC78500C33481 /* SceneDelegate.swift */; };
 		246AFB55242FC78A00C33481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246AFB54242FC78A00C33481 /* Assets.xcassets */; };
@@ -20,6 +25,7 @@
 		246AFB8C242FEB4800C33481 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB8B242FEB4800C33481 /* Budget.swift */; };
 		246AFB8E243008AF00C33481 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB8D243008AF00C33481 /* Transaction.swift */; };
 		246AFB90243008C300C33481 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB8F243008C300C33481 /* Category.swift */; };
+		246BC54024311207009B0C36 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BC53F24311207009B0C36 /* TextFieldExtension.swift */; };
 		246DE69B2430139900864CF0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DE69A2430139900864CF0 /* SignUpViewController.swift */; };
 		246DE6A7243019FE00864CF0 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246DE6A6243019FE00864CF0 /* PieChartViewController.swift */; };
 		246DE6B024301B5B00864CF0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DE6AF24301B5B00864CF0 /* Charts.framework */; };
@@ -72,6 +78,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2424B9BD243127D400501183 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		2424B9BF243128A600501183 /* TabbarMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarMasterViewController.swift; sourceTree = "<group>"; };
+		245547B12431557B0094BD64 /* LoginPostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPostRequest.swift; sourceTree = "<group>"; };
+		245547B32431558C0094BD64 /* SignUpPostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPostRequest.swift; sourceTree = "<group>"; };
+		24619BF524314204005C40E2 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		246AFB48242FC78500C33481 /* BudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246AFB4B242FC78500C33481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246AFB4D242FC78500C33481 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +102,7 @@
 		246AFB8B242FEB4800C33481 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		246AFB8D243008AF00C33481 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		246AFB8F243008C300C33481 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		246BC53F24311207009B0C36 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		246DE69A2430139900864CF0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		246DE6A6243019FE00864CF0 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		246DE6AF24301B5B00864CF0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/BudgetApp-draulsjshjhwikehabmmsnicqwrq/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
@@ -123,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245547AE2431553D0094BD64 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				245547B12431557B0094BD64 /* LoginPostRequest.swift */,
+				245547B32431558C0094BD64 /* SignUpPostRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		246AFB3F242FC78500C33481 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +171,9 @@
 			children = (
 				246AFB4B242FC78500C33481 /* AppDelegate.swift */,
 				246AFB59242FC78A00C33481 /* Info.plist */,
+				245547AE2431553D0094BD64 /* Networking */,
 				246AFB88242FE8B200C33481 /* Models */,
-				246AFB85242FD2E600C33481 /* ViewController */,
+				246AFB85242FD2E600C33481 /* ViewControllers */,
 				246AFB84242FD2CA00C33481 /* UI */,
 				246AFB83242FD2B300C33481 /* Extras */,
 			);
@@ -182,6 +204,7 @@
 				246AFB54242FC78A00C33481 /* Assets.xcassets */,
 				246AFB56242FC78A00C33481 /* LaunchScreen.storyboard */,
 				246AFB4D242FC78500C33481 /* SceneDelegate.swift */,
+				246BC53F24311207009B0C36 /* TextFieldExtension.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -195,14 +218,17 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		246AFB85242FD2E600C33481 /* ViewController */ = {
+		246AFB85242FD2E600C33481 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				246AFB81242FD27E00C33481 /* LoginViewController.swift */,
 				246DE69A2430139900864CF0 /* SignUpViewController.swift */,
 				246DE6A6243019FE00864CF0 /* PieChartViewController.swift */,
+				2424B9BD243127D400501183 /* BarChartViewController.swift */,
+				2424B9BF243128A600501183 /* TabbarMasterViewController.swift */,
+				24619BF524314204005C40E2 /* TransactionsViewController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		246AFB88242FE8B200C33481 /* Models */ = {
@@ -389,13 +415,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2424B9C0243128A600501183 /* TabbarMasterViewController.swift in Sources */,
 				246AFB8E243008AF00C33481 /* Transaction.swift in Sources */,
 				246AFB8A242FE8C400C33481 /* User.swift in Sources */,
+				2424B9BE243127D400501183 /* BarChartViewController.swift in Sources */,
 				246DE69B2430139900864CF0 /* SignUpViewController.swift in Sources */,
+				24619BF624314204005C40E2 /* TransactionsViewController.swift in Sources */,
+				246BC54024311207009B0C36 /* TextFieldExtension.swift in Sources */,
 				246AFB82242FD27E00C33481 /* LoginViewController.swift in Sources */,
 				246AFB8C242FEB4800C33481 /* Budget.swift in Sources */,
 				246AFB4C242FC78500C33481 /* AppDelegate.swift in Sources */,
+				245547B42431558C0094BD64 /* SignUpPostRequest.swift in Sources */,
 				246DE6A7243019FE00864CF0 /* PieChartViewController.swift in Sources */,
+				245547B22431557B0094BD64 /* LoginPostRequest.swift in Sources */,
 				246AFB4E242FC78500C33481 /* SceneDelegate.swift in Sources */,
 				246AFB90243008C300C33481 /* Category.swift in Sources */,
 			);
