@@ -8,12 +8,16 @@
 
 import Foundation
 
-class Category {
-    var name: String
-    var amount: Double
+class Category: Codable {
+    var expectedAmount: Double
+    var actualAmount: Double
     
-    init(name: String, amount: Double) {
-        self.name = name
-        self.amount = amount
+    init(expectedAmount: Double, actualAmount: Double) {
+        self.expectedAmount = expectedAmount
+        self.actualAmount = actualAmount
+    }
+    
+    func addTransaction(transaction: Transaction) {
+        self.actualAmount = self.actualAmount + transaction.amount
     }
 }

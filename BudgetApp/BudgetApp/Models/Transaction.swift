@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Transaction {
+class Transaction: Codable {
     var date: Date
-    var contents: String
+    var name: BudgetItemName
     var amount: Double
     
-    init(date: Date, contents: String, amount: Double) {
+    init(date: Date, name: BudgetItemName, amount: Double) {
         self.date = date
-        self.contents = contents
+        self.name = name
         self.amount = amount
     }
 }
