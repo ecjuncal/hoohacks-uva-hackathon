@@ -6,9 +6,19 @@ from .reponses import *
 from datetime import datetime as dt
 
 
-@app.route("/", methods=['GET'])
-def index():
-    return jsonify({"success": True})
+@app.route("/login", methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data['email']
+    password = data['password']
+
+    if email and password:
+        user_exists = User.query.filter(User.email == email).first()
+
+        if user_exists and user_exists.is_correct_password(password):
+            return jsonify({**{"error": False}, **user_exists.serialize()})
+
+    return jsonify(ErrorResponse("User does not exist or credentials are incorrect.").__dict__)
 
 
 @app.route("/register", methods=['POST'])
