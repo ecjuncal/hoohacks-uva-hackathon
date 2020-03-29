@@ -19,6 +19,12 @@ class PieChartViewController: UIViewController {
     private let otherColor = UIColor.blue
     
     @IBOutlet var pieChartView: PieChartView!
+    @IBOutlet var foodAmountTextField: UITextField!
+    @IBOutlet var housingAmountTextField: UITextField!
+    @IBOutlet var transportationAmountTextField: UITextField!
+    @IBOutlet var savingsAmountTextField: UITextField!
+    @IBOutlet var otherAmountTextField: UITextField!
+    
     var user: User?
     var foodItem = PieChartDataEntry(value: 0)
     var housingItem = PieChartDataEntry(value: 0)
@@ -41,30 +47,35 @@ class PieChartViewController: UIViewController {
         
         foodItem.label = "Food"
         foodItem.value = budgetDict[BudgetItemName.Food] ?? 0.0
+        foodAmountTextField.text = String(foodItem.value)
         if foodItem.value != 0.0 {
             dataEntries.append(foodItem)
         }
         
         housingItem.label = "Housing"
         housingItem.value = budgetDict[BudgetItemName.Housing] ?? 0.0
+        housingAmountTextField.text = String(housingItem.value)
         if housingItem.value != 0.0 {
             dataEntries.append(housingItem)
         }
 
         transportationItem.label = "Transportation"
         transportationItem.value = budgetDict[BudgetItemName.Transportation] ?? 0.0
+        transportationAmountTextField.text = String(transportationItem.value)
         if transportationItem.value != 0.0 {
             dataEntries.append(transportationItem)
         }
 
         savingsItem.label = "Savings"
         savingsItem.value = budgetDict[BudgetItemName.Savings] ?? 0.0
+        savingsAmountTextField.text = String(savingsItem.value)
         if savingsItem.value != 0.0 {
             dataEntries.append(savingsItem)
         }
 
         otherItem.label = "Other"
         otherItem.value = budgetDict[BudgetItemName.Other] ?? 0.0
+        otherAmountTextField.text = String(otherItem.value)
         if otherItem.value != 0.0 {
             dataEntries.append(otherItem)
         }
@@ -78,6 +89,11 @@ class PieChartViewController: UIViewController {
         let colors = [foodColor, housingColor, transportationColor, savingsColor, otherColor]
         chartDataSet.colors = colors
         pieChartView.data = chartData
+    }
+    
+    
+    @IBAction func viewChangesPressed(_ sender: Any) {
+        //updateFields, update user info, post to db
     }
 }
 
