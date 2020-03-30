@@ -22,7 +22,6 @@
 		246AFB80242FCAD900C33481 /* BudgetAppStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246AFB7F242FCAD900C33481 /* BudgetAppStoryBoard.storyboard */; };
 		246AFB82242FD27E00C33481 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB81242FD27E00C33481 /* LoginViewController.swift */; };
 		246AFB8A242FE8C400C33481 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB89242FE8C400C33481 /* User.swift */; };
-		246AFB8C242FEB4800C33481 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB8B242FEB4800C33481 /* Budget.swift */; };
 		246AFB8E243008AF00C33481 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB8D243008AF00C33481 /* Transaction.swift */; };
 		246AFB90243008C300C33481 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AFB8F243008C300C33481 /* Category.swift */; };
 		246BC54024311207009B0C36 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BC53F24311207009B0C36 /* TextFieldExtension.swift */; };
@@ -99,7 +98,6 @@
 		246AFB7F242FCAD900C33481 /* BudgetAppStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetAppStoryBoard.storyboard; sourceTree = "<group>"; };
 		246AFB81242FD27E00C33481 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		246AFB89242FE8C400C33481 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		246AFB8B242FEB4800C33481 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		246AFB8D243008AF00C33481 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		246AFB8F243008C300C33481 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		246BC53F24311207009B0C36 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 				246AFB89242FE8C400C33481 /* User.swift */,
 				246AFB8F243008C300C33481 /* Category.swift */,
 				246AFB8D243008AF00C33481 /* Transaction.swift */,
-				246AFB8B242FEB4800C33481 /* Budget.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				24619BF624314204005C40E2 /* TransactionsViewController.swift in Sources */,
 				246BC54024311207009B0C36 /* TextFieldExtension.swift in Sources */,
 				246AFB82242FD27E00C33481 /* LoginViewController.swift in Sources */,
-				246AFB8C242FEB4800C33481 /* Budget.swift in Sources */,
 				246AFB4C242FC78500C33481 /* AppDelegate.swift in Sources */,
 				245547B42431558C0094BD64 /* SignUpPostRequest.swift in Sources */,
 				246DE6A7243019FE00864CF0 /* PieChartViewController.swift in Sources */,

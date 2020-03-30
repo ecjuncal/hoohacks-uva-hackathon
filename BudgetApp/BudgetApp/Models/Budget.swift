@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 class Budget {
     var totalEarnings: Double = 0.0
     var budgetItems: [String: Double] = [String: Double]()
@@ -50,4 +50,4 @@ class Budget {
         
         //POST dictionary to endpoint
     }
-}
+}*/
